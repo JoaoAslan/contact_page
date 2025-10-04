@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("imgs/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(2.5px);
+
+  background-color: rgb(14, 69, 187);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.box-shadow {
+  grid-column: 3;
+  padding: 0px 60px;
+
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+
+  box-shadow: -20px 0px 100px rgb(0, 0, 0);
+
+  padding-top: 30%;
+}
+
+span {
+  background: linear-gradient(to right, #0b3b8a, #1b72ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  margin-top: 30px;
+}
+
+label {
+  font-family: "Inter";
+  padding-left: 2px;
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+
+.input-area {
+  font-family: "Inter";
+
+  width: 90%;
+  height: 32px;
+  padding: 4px 6px;
+  margin-bottom: 8px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.568);
+
+  transition: 0.2s all;
+}
+
+.input-area:hover,
+.input-area:focus {
+    outline: 2px solid #0f5ad3;
+    border: none;
+    transform: scale(1.005);
+}
+
+textarea.input-area {
+  height: 150px;
+  min-height: 32px;
+  max-height: 150px;
+  resize: vertical;
+  padding: 8px 6px;
+}
+
+.button {
+  font-family: "Inter";
+  font-weight: bold;
+  width: 9rem;
+  height: 2.6rem;
+  justify-self: center;
+
+  font-size: 16px;
+  align-self: center;
+  margin-top: 24px;
+
+  background-color: white;
+  color: #0f5ad3;
+  border: 2px solid #0f5ad3;
+  border-radius: 2em;
+
+  transition: all 0.2s;
+}
+
+.button:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.356);
+  transform: scale(1.03);
+  background-color: #0f5ad3;
+  color: white;
+}
