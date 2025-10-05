@@ -112,3 +112,50 @@ textarea.input-area {
   background-color: #0f5ad3;
   color: white;
 }
+
+/* aviso CSS */
+
+.notification {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px 15px 15px ;
+
+  background-color: #4caf4fb7; /* Verde */
+  border-bottom: 3px solid #15ce1b;
+  border-radius: 6px 6px 0px 0px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+  font-size: 16px;
+  font-family: "Inter";
+
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: default;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification .btn-close {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.notification .btn-close:hover {
+  transform: scale(1.02);
+}
+
+.notification.show {
+  opacity: 1;
+  display: block;
+}
+
