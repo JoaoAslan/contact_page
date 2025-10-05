@@ -87,7 +87,7 @@ textarea.input-area {
   padding: 8px 6px;
 }
 
-.button {
+.btn-submit {
   font-family: "Inter";
   font-weight: bold;
   width: 9rem;
@@ -106,7 +106,7 @@ textarea.input-area {
   transition: all 0.2s;
 }
 
-.button:hover {
+.btn-submit:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.356);
   transform: scale(1.03);
   background-color: #0f5ad3;
@@ -116,7 +116,7 @@ textarea.input-area {
 /* aviso CSS */
 
 .notification {
-  display: none; /* Oculto por padrão */
+  visibility: hidden; /* Oculto por padrão */
   position: fixed;
 
   bottom: 20px;
@@ -135,7 +135,7 @@ textarea.input-area {
 
   z-index: 1000;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
   cursor: default;
 }
 
@@ -145,17 +145,9 @@ textarea.input-area {
   gap: 10px;
 }
 
-.notification .btn-close {
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.notification .btn-close:hover {
-  transform: scale(1.02);
-}
-
 .notification.show {
   opacity: 1;
-  display: block;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
